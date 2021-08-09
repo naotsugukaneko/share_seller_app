@@ -12,10 +12,10 @@
 
   <body>
     <header>
+      <%= render "layouts/flash" %>
       <%= render "layouts/header" %>
     </header>
     <main>
-      <#% max_width メソッドは application_helper.rb に記載 %>
       <div class="base-container <%= max_width %>">
         <%= yield %>
       </div>

@@ -25,3 +25,12 @@
 .mw-xl {
   max-width: 1200px;
 }
+
+//フラッシュ
+.alert-notice {
+  @extend .alert-info;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}
