@@ -6,6 +6,19 @@
 @import 'bootstrap/scss/bootstrap';
 
 /* 全体 */
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #fffaf0;
+}
+
+main {
+  margin-top: 50px;
+  padding-top: 50px;
+  background-color: #fffaf0;
+}
 
 .base-container {
   margin: 0 auto;
@@ -33,4 +46,22 @@
 
 .alert-alert {
   @extend .alert-danger;
+}
+
+//ヘッダー
+body {
+  padding-top: 51px;
+}
+
+.base-bg-color {
+  background: linear-gradient(to right, #353ada, #5a9dfb);
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.header-nav {
+  font-size: 0.8rem;
+  margin: 0 auto;
 }
