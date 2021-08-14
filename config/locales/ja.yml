@@ -1,0 +1,30 @@
+ja:
+  attributes:
+    id: ID
+    namespace: 名前空間
+    resource_type: リソースタイプ
+    resource_id: リソースID
+    author_type: 著者タイプ
+    author_id: 著者ID
+    created_at: 作成日時
+    updated_at: 更新日時
+  activerecord:
+    models:
+      user: ユーザー
+      post: 投稿
+      comment: コメント
+    attributes:
+      user:
+        name: 名前
+        image: プロフィール画像
+        email: Eメール
+      post:
+        day: 投稿日
+        body: 内容
+        image: 画像
+        likes_count: いいね数
+        user: ユーザー
+      comment:
+        text: コメント
+        post: 投稿
+        user: ユーザー
