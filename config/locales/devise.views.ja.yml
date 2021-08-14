@@ -25,8 +25,13 @@ ja:
         unconfirmed_email: 未確認Eメール
         unlock_token: ロック解除用トークン
         updated_at: 更新日
+      admin_user: *user
     models:
       user: ユーザー
+      admin_user: 管理者ユーザー
+      admin_comment: 管理者コメント
+      post: 投稿
+      comment: コメント
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。
