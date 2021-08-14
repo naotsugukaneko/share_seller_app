@@ -40,6 +40,13 @@ main {
   max-width: 1200px;
 }
 
+//ログイン画面
+.container-login {
+  @extend .container-fluid;
+  max-width: 576px;
+  padding: 2rem;
+}
+
 //フラッシュ
 .alert-notice {
   @extend .alert-info;
