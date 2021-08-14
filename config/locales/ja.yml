@@ -22,5 +22,8 @@ ja:
         body: 内容
         image: 画像
         likes_count: いいね数
+        user: ユーザー
       comment:
         text: コメント
+        post: 投稿
+        user: ユーザー
