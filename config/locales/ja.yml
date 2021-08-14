@@ -16,6 +16,7 @@ ja:
     attributes:
       user:
         name: 名前
+        image: プロフィール画像
         email: Eメール
       post:
         day: 投稿日
