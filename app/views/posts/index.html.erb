@@ -1,6 +1,8 @@
 <h1>投稿一覧</h1>
 <div>
-  <p>【名前】<%= post.user.name %></p>
-  <p><%= image_tag post.image.url%></p>
-  <p>【内容】<%= post.body %></p>
+  <%= @posts.each do |post| %>
+    <p>【名前】<%= post.user.name %></p>
+    <p><%= image_tag post.image.url%></p>
+    <p>【内容】<%= post.body %></p>
+  <% end %>
 </div>
