@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
   def create
     post = current_user.posts.create!(post_params)
-    redirect_to post
+    redirect_to root_path
   end
 
   # def show; end
