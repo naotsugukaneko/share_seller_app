@@ -3,6 +3,7 @@
   <%= @posts.each do |post| %>
     <p>【名前】<%= post.user.name %></p>
     <p><%= image_tag post.image.url%></p>
+    <p><%= link_to "詳細", post %></p>
     <p>【内容】<%= post.body %></p>
   <% end %>
 </div>

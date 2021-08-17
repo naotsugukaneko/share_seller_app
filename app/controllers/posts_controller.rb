@@ -12,7 +12,9 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
-  # def show; end
+  def show
+    @post = Post.find(params[:id])
+  end
 
   # def edit; end
 
