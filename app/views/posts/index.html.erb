@@ -5,7 +5,7 @@
     <%= link_to post_path(post.id) do %>
       <div class="content_post">
         <%= image_tag post.image.url %>
-        <p><%= post.created_at %></p>
+        <p>【投稿日】<%= l post.created_at, format: :short %></p>
       </div>
     <% end %>
     <p>
