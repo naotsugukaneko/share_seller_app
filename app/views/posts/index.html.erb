@@ -1,20 +1,5 @@
-<h1>投稿一覧</h1>
-<div>
-  <% @posts.each do |post| %>
-    <p>【投稿者】<%= post.user.name %></p>
-    <%= link_to post_path(post.id) do %>
-      <div class="content_post">
-        <%= image_tag post.image.url %>
-        <p>【投稿日】<%= l post.created_at, format: :short %></p>
-      </div>
-    <% end %>
-    <p>
-      <% if post.body.nil? %>
-        <%= post.body %> 
-      <% else %>
-        <%= safe_join(post.body.split("\n"),tag(:br)) %>
-      <% end %> 
-    </p> 
-  <% end %>
+<div class="contents-title text-center">
+  <h3>- 投稿一覧 -</h3>
 </div>
+<%= render 'posts/post', post: @post %>
 <hr>

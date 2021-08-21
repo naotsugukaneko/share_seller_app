@@ -1,0 +1,23 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <% @posts.each do |post| %>
+      <div class="col-12 col-md-6 col-lg-6 text-card-container">
+        <div class="card content-card border-dark mb-3">
+          <%= link_to post_path(post.id), class:"abc" do %>
+            <div class="card-header p-1">
+              <%= image_tag post.image.url, class: 'card-img-top'%>
+            </div>
+            <div class="card-body text-dark text-card-body">
+              <p class="card-text text-title">【投稿者】<%= post.user.name %></p>
+              <p><%= post.body.truncate(30) %></p> 
+              <small class="text-muted">
+                <%= l post.created_at, format: :short %>
+              </small>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
