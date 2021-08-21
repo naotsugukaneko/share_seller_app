@@ -15,8 +15,8 @@ body {
 }
 
 main {
-  margin-top: 50px;
-  padding-top: 50px;
+  margin-top: 20px;
+  padding-top: 20px;
   padding-bottom: 100px;
   background-color: #fffaf0;
 }
@@ -72,4 +72,27 @@ body {
 .header-nav {
   font-size: 0.8rem;
   margin: 0 auto;
+}
+
+// 投稿一覧ページ
+.text-card-container {
+  padding-left: 9px;
+  padding-right: 9px;
+  margin-bottom: 50px;
+}
+.content-card {
+  height: 600px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: fit;
+}
+
+// 共通
+a:hover {
+  text-decoration: none;
 }
