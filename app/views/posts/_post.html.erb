@@ -10,13 +10,7 @@
             </div>
             <div class="card-body text-dark text-card-body">
               <p class="card-text text-title">【投稿者】<%= post.user.name %></p>
-              <p>
-                <% if post.body.nil? %>
-                  <%= post.body %> 
-                <% else %>
-                  <%= safe_join(post.body.split("\n"),tag(:br)) %>
-                <% end %> 
-              </p> 
+              <p><%= post.body.truncate(30) %></p> 
               <small class="text-muted">
                 <%= l post.created_at, format: :short %>
               </small>
