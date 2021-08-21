@@ -86,10 +86,10 @@ body {
   margin: 0 auto;
 }
 
-.card img {
-  width: 100%;
-  height: 100%;
-  object-fit: fit;
+.card-img-top {
+  width: 490px;
+  height: 450px;
+  object-fit: contain;
 }
 
 // 共通
