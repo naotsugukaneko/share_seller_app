@@ -19,11 +19,10 @@
 </div>
 
 <div class="row">
-  <ul>
-    <li class="comment-create">
-      <h3 class="text-left title">コメント</h3>
-    </li>
-    <li id="comments_area">
+  <ul class = "list-unstyled">
+    <li class="comment-create list-unstyled">
+      <h3 class="text-left title">コメント</h3>    </li>
+    <li id="comments_area list-unstyled">
       <%= render partial: 'comments/index', locals: { comments: @comments } %>
     </li>
   </ul>
