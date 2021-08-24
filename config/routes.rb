@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root "posts#index"
   devise_for :users
-  resources :posts
+  resources :posts do
+    resources :comments, only: [:create, :destroy]
+  end
 end

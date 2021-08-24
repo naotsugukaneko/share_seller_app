@@ -1,0 +1,26 @@
+<%= comments.count %>件のコメント
+<% comments.each do |comment| %>
+  <div class="media">
+    <a href="#" class="mr-3">
+      <%# プロフィール画像 %>
+    </a>
+    <div class="media-body">
+      <% unless comment.id.nil? %>
+        <div class="comment-container">
+          <p><%= link_to "@#{comment.user.name}", user_session_path(comment.user.id) %></p>
+          <div class="comment-entry">
+            <%= comment.text %>
+            <% if comment.user == current_user %>
+              <%= link_to post_comment_path(comment.post_id, comment.id), method: :delete, remote: true, class: "comment_destroy" do %>
+                <i class="fas fa-trash" style="color: black;"></i>
+              <% end %>
+            <% end %>
+          </div>
+          <span class="comment-date pull-right">
+            <%= comment.created_at.strftime('%Y/%m/%d %H:%M:%S') %>
+          </span>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
