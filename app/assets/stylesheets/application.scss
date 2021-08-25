@@ -81,15 +81,15 @@ body {
   margin-bottom: 50px;
 }
 .content-card {
-  height: 600px;
-  max-width: 500px;
+  height: 100%;
+  max-width: 100%, 500px;
   margin: 0 auto;
 }
 
 .card-img-top {
-  width: 490px;
-  height: 450px;
-  object-fit: contain;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 // 共通
