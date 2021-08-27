@@ -16,7 +16,7 @@
               <%# <%= image_tag image_url(@post.user), class: "post-profile-icon" %>
             <%# <% end %>
             <%= link_to user_session_path(@post.user), class: "black-color post-user-name", title: @post.user.name do %>
-              <strong><%= @post.user.name %></strong>
+              <h4><strong><%= @post.user.name %></strong></h4>
             <% end %>
           </div>
           <div class="card-right-body">
@@ -32,7 +32,7 @@
           </div>
         </div>
         <div class="row parts">
-          <p class="card-text">
+          <p class="post-id">
             <% if current_user.id == @post.user_id %>
               <%= link_to "編集", edit_post_path(@post), class: "card-text-btn btn-success btn-lg btn-block" %>
               <%= link_to "削除", post_path(@post), class: "card-text-btn btn btn-danger btn-lg btn-block", method: :delete, data: { confirm: "削除しますか？" } %>

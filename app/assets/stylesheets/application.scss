@@ -109,7 +109,11 @@ body {
 }
 
 .post-wrap .col-md-8 {
-  padding: 0px;
+  padding: 2px;
+}
+
+.post-wrap .col-md-4 {
+  padding: 1px;
 }
 
 .card-right {
@@ -138,7 +142,7 @@ body {
 .post-user-name {
   display: flex;
   align-items: center;
-  line-height: 0;
+  line-height: 3;
 }
 
 //ボタン
@@ -150,7 +154,7 @@ body {
 
 .card-text-btn {
   width: 214px;
-  margin: 8px;
+  margin: 10px;
   text-align: center;
 }
 
