@@ -8,8 +8,8 @@
         <%= image_tag @post.image.url, class: 'card-img-left' %>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="card-right">
+    <div class="col-md-4 bg-white">
+      <div class="card-right ">
         <div class="card-right-comment">
           <div class="card-right-name">
             <%# <%= link_to user_session_path(@post.user), class: "no-text-decoration" do %>
@@ -36,6 +36,12 @@
           </div>
         </div>
         <div class="row parts">
+          <p class="card-text">
+            <% if current_user.id == @post.user_id %>
+              <%= link_to "編集", edit_post_path(@post), class: "btn btn-secondary mb-2" %>
+              <%= link_to "削除", post_path(@post), method: :delete, data: { confirm: "削除しますか？" } %>
+            <% end %>
+          </p>
         </div>
         <div class="post-time"><%= l @post.created_at, format: :short %></div>
         <hr>
@@ -43,36 +49,6 @@
     </div>
   </div>
 </div>
-
-<div class="card mb-3" style="max-width: 1200px;">
-  <div class="row">
-    <div class="card-img col-md-8">
-      <%= image_tag @post.image.url, class: 'card-img-left'%>
-    </div>
-    <div class="col-md-4">
-      <div class="card-body">
-        <h5 class="card-title">【投稿者】<%= @post.user.name %></h5>
-        <p class="card-text">
-          <% if @post.body.nil? %>
-            <%= @post.body %> 
-          <% else %>
-            <%= safe_join(@post.body.split("\n"),tag(:br)) %>
-          <% end %>  
-        </p>
-        <p class="card-text">
-          <% if current_user.id == @post.user_id %>
-            <%= link_to "編集", edit_post_path(@post), class: "btn btn-secondary mb-2" %>
-            <%= link_to "削除", post_path(@post), method: :delete, data: { confirm: "削除しますか？" } %>
-          <% end %>
-        </p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted"><%= l @post.created_at, format: :short %></small>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 <div class="text-center title">
   <h5>- コメント -</h5>
