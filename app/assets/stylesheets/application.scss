@@ -93,6 +93,55 @@ body {
   object-fit: cover;
 }
 
+// 詳細ページ
+.postShow-wrap {
+  border: 5px solid #e6e6e6;
+  height: 100%;
+  max-width: 850px;
+  margin: 10px;
+}
+///画像サイズ
+.card-img-left {
+  height: 100%;
+  width: 100%;
+  // max-height: 600px;
+  margin: auto;
+  object-fit: fit;
+}
+
+.post-wrap .col-md-8 {
+  padding: 0px;
+}
+
+.card-right {
+  padding: 20px;
+}
+
+.card-right-name {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+}
+
+.card-right-body {
+  min-height: 10em;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.card-right-comment {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  height: 320px;
+  overflow: auto;
+}
+
+.post-user-name {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+}
+
 // 共通
 a:hover {
   text-decoration: none;
