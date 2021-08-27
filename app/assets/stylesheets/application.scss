@@ -78,6 +78,7 @@ body {
 .text-card-container {
   padding-left: 9px;
   padding-right: 9px;
+  margin-top: 12px;
   margin-bottom: 50px;
 }
 .content-card {
@@ -96,9 +97,9 @@ body {
 // 詳細ページ
 .postShow-wrap {
   border: 5px solid #e6e6e6;
-  height: 100%;
+  max-height: 100%;
   max-width: 850px;
-  margin: 10px;
+  margin: 12px;
 }
 ///画像サイズ
 .card-img-left {
@@ -135,7 +136,8 @@ body {
 .card-right-comment {
   padding-bottom: 10px;
   border-bottom: 1px solid #e6e6e6;
-  height: 320px;
+  max-height: 512px;
+  min-height: 280px;
   overflow: auto;
 }
 
@@ -145,6 +147,9 @@ body {
   line-height: 3;
 }
 
+.parts {
+  text-align: end;
+}
 //ボタン
 .btn {
   width: 100%;
