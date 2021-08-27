@@ -141,6 +141,19 @@ body {
   line-height: 0;
 }
 
+//ボタン
+.btn {
+  width: 100%;
+  max-width: 850px;
+  margin: 10px;
+}
+
+.card-text-btn {
+  width: 214px;
+  margin: 8px;
+  text-align: center;
+}
+
 // 共通
 a:hover {
   text-decoration: none;

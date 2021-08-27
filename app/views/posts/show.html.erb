@@ -30,16 +30,12 @@
               </strong>
             </div>
           </div>
-          <div class="comment-post-id">
-            <div class="m-2">
-            </div>
-          </div>
         </div>
         <div class="row parts">
           <p class="card-text">
             <% if current_user.id == @post.user_id %>
-              <%= link_to "編集", edit_post_path(@post), class: "btn btn-secondary mb-2" %>
-              <%= link_to "削除", post_path(@post), method: :delete, data: { confirm: "削除しますか？" } %>
+              <%= link_to "編集", edit_post_path(@post), class: "card-text-btn btn-success btn-lg btn-block" %>
+              <%= link_to "削除", post_path(@post), class: "card-text-btn btn btn-danger btn-lg btn-block", method: :delete, data: { confirm: "削除しますか？" } %>
             <% end %>
           </p>
         </div>
