@@ -14,10 +14,8 @@
             <%= link_to "@#{comment.user.name}", user_session_path(comment.user.id) %>
               <%= comment.text %>
               <% if comment.user == current_user %>
-                <%= link_to post_comment_path(comment.post_id, comment.id), method: :delete, remote: true, class: "comment_destroy" do %>
-                <i class="fas fa-trash" style="color: black;"></i>
+                <%= link_to "削除", post_comment_path(@post, comment), method: :delete, data: { confirm: "削除しますか？" }, remote: true, class: "comment_destroy" %>
               <% end %>
-            <% end %>
           </div>
           <small class="post-time text-muted"><%= l comment.created_at, format: :short %></small>
         <% end %>
