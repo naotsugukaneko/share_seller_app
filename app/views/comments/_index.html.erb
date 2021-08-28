@@ -1,26 +1,27 @@
-<%= comments.count %>件のコメント
-<% comments.each do |comment| %>
+<div class="comment-container bg-light">
+  <div class="text-center title">
+    <h5>- コメント一覧 -</h5>
+  </div>
+  <%= comments.count %>件のコメント
   <div class="media">
-    <a href="#" class="mr-3">
-      <%# プロフィール画像 %>
-    </a>
     <div class="media-body">
-      <% unless comment.id.nil? %>
-        <div class="comment-container">
-          <p><%= link_to "@#{comment.user.name}", user_session_path(comment.user.id) %></p>
+      <% comments.each do |comment| %>
+        <a href="#" class="mr-3">
+          <%# プロフィール画像 %>
+        </a>
+        <% unless comment.id.nil? %>
           <div class="comment-entry">
-            <%= comment.text %>
-            <% if comment.user == current_user %>
-              <%= link_to post_comment_path(comment.post_id, comment.id), method: :delete, remote: true, class: "comment_destroy" do %>
+            <%= link_to "@#{comment.user.name}", user_session_path(comment.user.id) %>
+              <%= comment.text %>
+              <% if comment.user == current_user %>
+                <%= link_to post_comment_path(comment.post_id, comment.id), method: :delete, remote: true, class: "comment_destroy" do %>
                 <i class="fas fa-trash" style="color: black;"></i>
               <% end %>
             <% end %>
           </div>
-          <span class="comment-date pull-right">
-            <%= comment.created_at.strftime('%Y/%m/%d %H:%M:%S') %>
-          </span>
-        </div>
+          <small class="post-time text-muted"><%= l comment.created_at, format: :short %></small>
+        <% end %>
       <% end %>
     </div>
   </div>
-<% end %>
+</div>
