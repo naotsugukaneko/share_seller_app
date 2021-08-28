@@ -1,28 +1,57 @@
-<h1>投稿詳細</h1>
-<div>
-  <% if @post.image? %> 
-    <p><%= image_tag @post.image.url%></p>
-  <% end %>
-  <p>【投稿者】<%= @post.user.name %></p>
-  <p>
-    <% if current_user.id == @post.user_id %>
-      <%= link_to "編集", edit_post_path(@post) %>
-      <%= link_to "削除", post_path(@post), method: :delete, data: { confirm: "削除しますか？" } %>
-    <% end %>
-  </p>
-  <p>【投稿日】 <%= l @post.created_at, format: :short %></p>
-  <% if @post.body.nil? %>
-    <%= @post.body %> 
-  <% else %>
-    <%= safe_join(@post.body.split("\n"),tag(:br)) %>
-  <% end %>  
+<div class="container">
+  <div class="contents-title text-center">
+    <h3>- 投稿詳細 -</h3>
+  </div>
+  <div class="col-md-10 col-md-offset-1 mx-auto postShow-wrap">
+    <div class="row post-wrap">
+      <div class="col-md-8">
+        <div class="card-left">
+          <%= image_tag @post.image.url, class: 'card-img-left' %>
+        </div>
+      </div>
+      <div class="col-md-4 bg-white">
+        <div class="card-right ">
+          <div class="card-right-comment">
+            <div class="card-right-name">
+              <%# <%= link_to user_session_path(@post.user), class: "no-text-decoration" do %>
+                <%# <%= image_tag image_url(@post.user), class: "post-profile-icon" %>
+              <%# <% end %>
+              <%= link_to user_session_path(@post.user), class: "black-color post-user-name", title: @post.user.name do %>
+                <h4><strong><%= @post.user.name %></strong></h4>
+              <% end %>
+            </div>
+            <div class="card-right-body">
+              <div class="m-2">
+                <strong>
+                  <% if @post.body.nil? %>
+                    <%= @post.body %> 
+                  <% else %>
+                    <%= safe_join(@post.body.split("\n"),tag(:br)) %>
+                  <% end %>  
+                </strong>
+              </div>
+            </div>
+          </div>
+          <div class="row parts">
+            <p class="post-id">
+              <% if current_user.id == @post.user_id %>
+                <%= link_to "編集", edit_post_path(@post), class: "card-text-btn btn-success btn-lg btn-block" %>
+                <%= link_to "削除", post_path(@post), class: "card-text-btn btn btn-danger btn-lg btn-block", method: :delete, data: { confirm: "削除しますか？" } %>
+              <% end %>
+            </p>
+          </div>
+          <small class="post-time text-muted"><%= l @post.created_at, format: :short %></small>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card comment-card">
+    <div class="comment-create">
+      <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
+      <div id="comments_area">
+        <%= render partial: 'comments/index', locals: { comments: @comments } %>
+      </div> 
+    </div>
+  </div>
 </div>
-
-<h3 class="text-center title">コメント</h3>
-<div class="comment-create">
-  <h3 class="text-left">レビューを投稿する</h3>
-  <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
-</div>
-<div id="comments_area">
-  <%= render partial: 'comments/index', locals: { comments: @comments } %>
-</div>   
