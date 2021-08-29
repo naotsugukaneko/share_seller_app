@@ -20,9 +20,8 @@ class PostsController < ApplicationController
     @comments = @post.comments.order(created_at: :desc)
   end
 
-  # def edit; end
-
   def update
+    @post.image.attach(params[:image]) if @post.image.blank?
     @post.update!(post_params)
     redirect_to @post
   end
