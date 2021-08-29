@@ -1,5 +1,5 @@
 <!-- コメント入力フォーム ------------------------------------------------------------>
 <%= form_with(model: [post, comment], url: post_comments_path(@post)) do |f| %>
-  <%= f.text_area :text, class: "input-comment", placeholder: "コメントする", rows: 2.5 %>
+  <%= f.text_area :text, class: "input-comment", placeholder: " 👏コメントする..", rows: 2.5 %>
   <%= f.submit "投稿する", class: "form-btn btn btn-info btn-lg btn-block" %>
 <% end %>

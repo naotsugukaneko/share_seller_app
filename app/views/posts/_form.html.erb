@@ -1,5 +1,9 @@
-<%= form_with model: @post, local: true do |f| %>
-  <p><%= f.text_area :body, required: true %></p>
-  <p><%= f.file_field :image, accept: "image/png,image/jpeg,image/gif", required: true %></p>
-  <p><%= f.submit "送信" %></p>
-<% end %>
+<div class="container form-container">
+  <%= form_with model: @post, local: true do |f| %>
+    <div class="card image-form-card">
+      <%= f.file_field :image, class: "post-image", accept: "image/png,image/jpeg,image/gif", required: true %>
+    </div>
+    <%= f.text_area :body, class: "input-post", placeholder: " 🖋投稿する..", rows: 12, required: true %>
+    <%= f.submit "投稿する", class: "form-btn btn btn-info btn-lg btn-block" %>
+  <% end %>
+</div>
