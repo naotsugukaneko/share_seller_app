@@ -21,7 +21,6 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post.image.attach(params[:image]) if @post.image.blank?
     @post.update!(post_params)
     redirect_to @post
   end
@@ -34,7 +33,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:body, :image)
+    params.require(:post).permit(:body, :image, :image_cache)
   end
 
   def set_post
