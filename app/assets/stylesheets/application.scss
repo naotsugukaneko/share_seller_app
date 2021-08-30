@@ -186,6 +186,38 @@ body {
   padding: 20px;
 }
 
+//投稿・編集ページ
+.form-card {
+  max-width: 850px;
+  margin: auto;
+  padding: 30px;
+}
+
+.post-image {
+  // margin: auto;
+}
+///formの大枠
+.form-container {
+  padding: 18px;
+}
+///画像選択
+.image-form-card {
+  max-width: 800px;
+  padding: 15px;
+  height: 4.5rem;
+  font-size: 20px;
+}
+///投稿内容
+.input-post {
+  border: 4px solid #75d6dd;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
 // 共通
 a:hover {
   text-decoration: none;

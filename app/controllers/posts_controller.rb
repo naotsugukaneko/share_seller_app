@@ -20,8 +20,6 @@ class PostsController < ApplicationController
     @comments = @post.comments.order(created_at: :desc)
   end
 
-  # def edit; end
-
   def update
     @post.update!(post_params)
     redirect_to @post
@@ -35,7 +33,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:body, :image)
+    params.require(:post).permit(:body, :image, :image_cache)
   end
 
   def set_post
