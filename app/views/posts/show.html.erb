@@ -42,6 +42,9 @@
           </div>
           <small class="post-time text-muted"><%= l @post.created_at, format: :short %></small>
           <hr>
+          <div id="show_like_<%= @post.id %>">
+            <%= render 'likes/like', post: @post %>
+          </div>
         </div>
       </div>
     </div>
