@@ -95,6 +95,11 @@ body {
   margin: 0 auto;
 }
 
+.text-card-body {
+  text-decoration: black;
+  color: black;
+}
+
 .card-img-top {
   max-height: 500px;
   min-height: 500px;
@@ -223,6 +228,15 @@ body {
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 20px;
+}
+
+// いいね機能
+.like-btn {
+  color: #8899a6;
+}
+
+.unlike-btn {
+  color: #ff2581;
 }
 
 // 共通
