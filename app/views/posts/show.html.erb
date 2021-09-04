@@ -42,8 +42,8 @@
           </div>
           <small class="post-time text-muted"><%= l @post.created_at, format: :short %></small>
           <hr>
-          <div id="show_like<%= @post.id %>">
-            <%= render 'likes/like', post: @post %>
+          <div id="index_like<%= @post.id %>">
+            <%= render partial: 'likes/like', locals: { post: @post, like: @like} %>
           </div>
         </div>
       </div>
