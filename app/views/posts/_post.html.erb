@@ -13,8 +13,8 @@
               <small class="text-muted">
                 <%= l post.created_at, format: :short %>
               </small>
-              <div id="index_like_<%= post.id %>">
-                <%= render 'likes/like', post: post %>
+              <div id="index_like<%= post.id %>">
+                <%= render partial: 'likes/like', locals: { post: post, like: @like} %>
               </div>
             </div>
           <% end %>
