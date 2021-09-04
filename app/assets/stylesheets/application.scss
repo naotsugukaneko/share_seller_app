@@ -127,6 +127,7 @@ body {
 
 .card-right {
   padding: 20px;
+  position: relative;
 }
 
 .card-right-name {
@@ -136,7 +137,7 @@ body {
 }
 
 .card-right-body {
-  min-height: 10em;
+  max-height: 10em;
   display: table-cell;
   vertical-align: middle;
 }
@@ -144,8 +145,9 @@ body {
 .card-right-comment {
   padding-bottom: 10px;
   border-bottom: 1px solid #e6e6e6;
-  max-height: 368px;
-  min-height: 280px;
+  max-height: 300px;
+  min-height: 200px;
+  margin-bottom: 12px;
   overflow: auto;
 }
 
@@ -154,20 +156,22 @@ body {
   align-items: center;
   line-height: 3;
 }
-
-.parts {
-  text-align: end;
+/// 詳細ページのいいね
+.card-right-like {
+  text-align: center;
 }
 ///ボタン
 .card-text-btn {
-  width: 200px;
-  margin: 10px;
+  width: 100%;
+  margin: auto;
+  margin-top: 12px;
   text-align: center;
 }
-//コメント
+
+//コメント機能
 .comment-card {
   border: 5px solid #e6e6e6;
-  padding: 10px;
+  padding: 20px;
   width: 100%;
   max-width: 850px;
   margin: auto;
@@ -176,21 +180,19 @@ body {
 .input-comment {
   border: 4px solid #75d6dd;
   width: 100%;
-  max-width: 800px;
-  margin: 9px;
+  margin: auto;
   font-size: 20px;
 }
 
 .form-btn {
   width: 100%;
-  max-width: 800px;
   margin: auto;
   margin-bottom: 18px;
   text-align: center;
 }
 
 .comment-container {
-  margin: 10px;
+  margin: auto;
   padding: 20px;
 }
 
@@ -201,9 +203,6 @@ body {
   padding: 30px;
 }
 
-.post-image {
-  // margin: auto;
-}
 ///formの大枠
 .form-container {
   padding: 18px;
