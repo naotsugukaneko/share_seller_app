@@ -9,7 +9,7 @@
             </div>
             <div class="card-body text-dark text-card-body">
               <p class="card-text text-title">【投稿者】<%= post.user.name %></p>
-              <p><%= post.body.truncate(30) %></p> 
+              <p><%= post.body.truncate(30) %></p>
               <small class="text-muted">
                 <%= l post.created_at, format: :short %>
               </small>

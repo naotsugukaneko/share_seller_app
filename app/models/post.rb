@@ -7,7 +7,7 @@ class Post < ApplicationRecord
   validates :image, presence: true
   mount_uploader :image, ImageUploader
 
-  def like_user(user_id)
-    likes.find_by(user_id: user_id)
+  def liked_by?(user)
+    likes.any? { |like| like.user_id == user.id }
   end
 end
