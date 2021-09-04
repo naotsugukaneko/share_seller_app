@@ -1,7 +1,7 @@
 <div class="container form-container">
   <%= form_with model: @post, local: true do |f| %>
     <div class="card image-form-card">
-      <%= f.file_field :image, class: "post-image", accept: "image/png,image/jpeg,image/gif", required: true %>
+      <%= f.file_field :image, class: "post-image", accept: "image/png,image/jpeg,image/gif" %>
       <%= f.hidden_field :image_cache %>
     </div>
     <%= f.text_area :body, class: "input-post", placeholder: " 🖋投稿する..", rows: 12, required: true %>

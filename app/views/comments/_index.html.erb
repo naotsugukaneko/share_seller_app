@@ -14,8 +14,8 @@
             <%= link_to "@#{comment.user.name}", user_session_path(comment.user.id) %>
               <%= comment.text %>
               <% if comment.user == current_user %>
-                <%= link_to post_comment_path(comment.post_id, comment.id), method: :delete, data: { confirm: "削除しますか？" , remote: true } do %>
-                <i class="fas fa-trash" style="color: black;"></i> 削除
+                <%= link_to post_comment_path(comment.post_id, comment.id), class: "btn btn-danger text-white", method: :delete, data: { confirm: "削除しますか？" , remote: true } do %>
+                  <i class="fas fa-trash" style="color: black;"></i>
                 <% end %>
               <% end %>
           </div>
