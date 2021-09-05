@@ -97,8 +97,23 @@ body {
   max-width: 100%;
   margin: 0 auto;
 }
+///アイコン画像
+.icon_image {
+  //サイズ指定
+  width: 50px;
+  height: 50px;
+  //画像を丸くする
+  border-radius: 60px;
+  //タテヨコ比を変えないままトリミング
+  object-fit: cover;
+}
 
-.text-card-body {
+.text-title {
+  font-size: 24px;
+  color: black;
+}
+
+.card-body {
   text-decoration: black;
   color: black;
 }
