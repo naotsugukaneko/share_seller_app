@@ -13,11 +13,9 @@
         <div class="card-right ">
           <div class="card-right-comment">
             <div class="card-right-name">
-              <%# <%= link_to user_session_path(@post.user), class: "no-text-decoration" do %>
-                <%# <%= image_tag image_url(@post.user), class: "post-profile-icon" %>
-              <%# <% end %>
               <%= link_to user_session_path(@post.user), class: "black-color post-user-name", title: @post.user.name do %>
-                <h4><strong><%= @post.user.name %></strong></h4>
+                <img src=<%= @post.user.image %> class = "icon_image">
+                <strong><%= @post.user.name %></strong>
               <% end %>
             </div>
             <div class="card-right-body">

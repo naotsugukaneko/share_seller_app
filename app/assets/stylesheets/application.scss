@@ -106,11 +106,13 @@ body {
   border-radius: 60px;
   //タテヨコ比を変えないままトリミング
   object-fit: cover;
+  margin-right: 5px;
 }
 
 .text-title {
   font-size: 24px;
   color: black;
+  line-height: 3;
 }
 
 .card-body {
@@ -149,12 +151,12 @@ body {
 }
 
 .card-right {
-  padding: 20px;
+  padding: 12px;
   position: relative;
 }
 
 .card-right-name {
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   border-bottom: 1px solid #e6e6e6;
   display: flex;
 }
@@ -178,6 +180,7 @@ body {
   display: flex;
   align-items: center;
   line-height: 3;
+  font-size: 24px;
 }
 /// 詳細ページのいいね
 .card-right-like {
