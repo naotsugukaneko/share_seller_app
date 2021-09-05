@@ -221,6 +221,17 @@ body {
   margin: auto;
   padding: 20px;
 }
+///コメントアイコン画像
+.comment_icon_image {
+  //サイズ指定
+  width: 30px;
+  height: 30px;
+  //画像を丸くする
+  border-radius: 40px;
+  //タテヨコ比を変えないままトリミング
+  object-fit: cover;
+  margin-right: 2px;
+}
 
 //投稿・編集ページ
 .form-card {
