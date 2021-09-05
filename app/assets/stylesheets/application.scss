@@ -106,18 +106,21 @@ body {
   border-radius: 60px;
   //タテヨコ比を変えないままトリミング
   object-fit: cover;
-  margin-right: 5px;
+  margin-right: 1px;
 }
 
 .text-title {
   font-size: 24px;
   color: black;
   line-height: 3;
+  margin: 0;
 }
 
-.card-body {
-  text-decoration: black;
+.text-card-body {
   color: black;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
 }
 
 .card-img-top {
@@ -182,10 +185,6 @@ body {
   line-height: 3;
   font-size: 24px;
 }
-/// 詳細ページのいいね
-.card-right-like {
-  text-align: center;
-}
 ///ボタン
 .card-text-btn {
   width: 100%;
@@ -194,7 +193,7 @@ body {
   text-align: center;
 }
 
-//コメント機能
+// コメント機能
 .comment-card {
   border: 5px solid #e6e6e6;
   padding: 20px;
@@ -230,7 +229,7 @@ body {
   border-radius: 40px;
   //タテヨコ比を変えないままトリミング
   object-fit: cover;
-  margin-right: 2px;
+  margin-right: 0;
 }
 
 //投稿・編集ページ
@@ -263,6 +262,11 @@ body {
 }
 
 // いいね機能
+.card-like {
+  float: right;
+  margin-right: 10px;
+}
+
 .like-btn {
   color: #8899a6;
 }

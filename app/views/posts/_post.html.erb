@@ -10,12 +10,13 @@
             <div class="card-body text-card-body">
               <p class="card-text text-title">
                 <img src=<%= post.user.image %> class = "icon_image">
-                <%= post.user.name %>
+                <strong><%= post.user.name %></strong>
               </p>
               <p><%= post.body.truncate(30) %></p>
               <small class="text-muted">
                 <%= l post.created_at, format: :short %>
               </small>
+              <hr>
               <div id="index_like<%= post.id %>">
                 <%= render partial: 'likes/like', locals: { post: post, like: @like} %>
               </div>
