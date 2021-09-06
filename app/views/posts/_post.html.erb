@@ -7,12 +7,16 @@
             <div class="card-header p-1">
               <%= image_tag post.image.url, class: 'card-img-top'%>
             </div>
-            <div class="card-body text-dark text-card-body">
-              <p class="card-text text-title">【投稿者】<%= post.user.name %></p>
+            <div class="card-body text-card-body">
+              <p class="card-text text-title">
+                <img src=<%= post.user.image %> class = "icon_image">
+                <strong><%= post.user.name %></strong>
+              </p>
               <p><%= post.body.truncate(30) %></p>
               <small class="text-muted">
                 <%= l post.created_at, format: :short %>
               </small>
+              <hr>
               <div id="index_like<%= post.id %>">
                 <%= render partial: 'likes/like', locals: { post: post, like: @like} %>
               </div>

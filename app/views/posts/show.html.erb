@@ -13,11 +13,9 @@
         <div class="card-right ">
           <div class="card-right-comment">
             <div class="card-right-name">
-              <%# <%= link_to user_session_path(@post.user), class: "no-text-decoration" do %>
-                <%# <%= image_tag image_url(@post.user), class: "post-profile-icon" %>
-              <%# <% end %>
               <%= link_to user_session_path(@post.user), class: "black-color post-user-name", title: @post.user.name do %>
-                <h4><strong><%= @post.user.name %></strong></h4>
+                <img src=<%= @post.user.image %> class = "icon_image">
+                <strong><%= @post.user.name %></strong>
               <% end %>
             </div>
             <div class="card-right-body">
@@ -34,22 +32,15 @@
           </div>
           <small class="post-time text-muted"><%= l @post.created_at, format: :short %></small>
           <hr>
-          <div class="card-right-like">
-            <strong>
-              <span class='text'>
-                参考になったら「いいね」<i class="far fa-regular fa-thumbs-up"></i>
-              </span>
-            </strong>
-            <div id="index_like<%= @post.id %>">
-              <%= render partial: 'likes/like', locals: { post: @post, like: @like} %>
-            </div>
-          </div>
           <p class="post-id">
             <% if current_user.id == @post.user_id %>
               <%= link_to "編集", edit_post_path(@post), class: "card-text-btn btn-success btn-lg btn-block" %>
               <%= link_to "削除", post_path(@post), class: "card-text-btn btn btn-danger btn-lg btn-block", method: :delete, data: { confirm: "削除しますか？" } %>
             <% end %>
           </p>
+          <div id="index_like<%= @post.id %>">
+            <%= render partial: 'likes/like', locals: { post: @post, like: @like} %>
+          </div>
         </div>
       </div>
     </div>

@@ -11,13 +11,16 @@
         </a>
         <% unless comment.id.nil? %>
           <div class="comment-entry">
-            <%= link_to "@#{comment.user.name}", user_session_path(comment.user.id) %>
-              <%= comment.text %>
-              <% if comment.user == current_user %>
-                <%= link_to post_comment_path(comment.post_id, comment.id), class: "btn btn-danger text-white", method: :delete, data: { confirm: "削除しますか？" , remote: true } do %>
-                  <i class="fas fa-trash" style="color: white;"></i><small>削除</small>
-                <% end %>
+            <%= link_to "user_session_path(comment.user.id)" do %>
+              <img src=<%= @post.user.image %> class = "comment_icon_image">
+              <strong><%= "#{comment.user.name}" %></strong>
+            <% end %>
+            <%= comment.text %>
+            <% if comment.user == current_user %>
+              <%= link_to post_comment_path(comment.post_id, comment.id), class: "btn btn-danger text-white", method: :delete, data: { confirm: "削除しますか？" , remote: true } do %>
+                <i class="fas fa-trash" style="color: white;"></i><small>削除</small>
               <% end %>
+            <% end %>
           </div>
           <small class="post-time text-muted"><%= l comment.created_at, format: :short %></small>
         <% end %>

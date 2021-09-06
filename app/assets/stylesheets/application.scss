@@ -54,6 +54,9 @@ main {
   max-width: 576px;
   padding: 2rem;
 }
+.container-login h1 {
+  text-align: center;
+}
 
 //フラッシュ
 .alert-notice {
@@ -94,10 +97,30 @@ body {
   max-width: 100%;
   margin: 0 auto;
 }
+///アイコン画像
+.icon_image {
+  //サイズ指定
+  width: 50px;
+  height: 50px;
+  //画像を丸くする
+  border-radius: 60px;
+  //タテヨコ比を変えないままトリミング
+  object-fit: cover;
+  margin-right: 1px;
+}
+
+.text-title {
+  font-size: 24px;
+  color: black;
+  line-height: 3;
+  margin: 0;
+}
 
 .text-card-body {
-  text-decoration: black;
   color: black;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
 }
 
 .card-img-top {
@@ -131,12 +154,12 @@ body {
 }
 
 .card-right {
-  padding: 20px;
+  padding: 12px;
   position: relative;
 }
 
 .card-right-name {
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   border-bottom: 1px solid #e6e6e6;
   display: flex;
 }
@@ -160,10 +183,7 @@ body {
   display: flex;
   align-items: center;
   line-height: 3;
-}
-/// 詳細ページのいいね
-.card-right-like {
-  text-align: center;
+  font-size: 24px;
 }
 ///ボタン
 .card-text-btn {
@@ -173,7 +193,7 @@ body {
   text-align: center;
 }
 
-//コメント機能
+// コメント機能
 .comment-card {
   border: 5px solid #e6e6e6;
   padding: 20px;
@@ -199,6 +219,17 @@ body {
 .comment-container {
   margin: auto;
   padding: 20px;
+}
+///コメントアイコン画像
+.comment_icon_image {
+  //サイズ指定
+  width: 30px;
+  height: 30px;
+  //画像を丸くする
+  border-radius: 40px;
+  //タテヨコ比を変えないままトリミング
+  object-fit: cover;
+  margin-right: 0;
 }
 
 //投稿・編集ページ
@@ -231,6 +262,11 @@ body {
 }
 
 // いいね機能
+.card-like {
+  float: right;
+  margin-right: 10px;
+}
+
 .like-btn {
   color: #8899a6;
 }
