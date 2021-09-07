@@ -96,6 +96,51 @@ body {
   margin-right: 0;
 }
 
+// マイページ
+.mypage-wrap {
+  max-height: 100%;
+  max-width: 500px;
+  margin-top: 12px;
+  padding: 20px;
+}
+
+.card-mypage-left {
+  margin: auto;
+  padding: 12px;
+}
+.mypage_icon_image {
+  //サイズ指定
+  width: 260px;
+  height: 260px;
+  //画像を丸くする
+  border-radius: 300px;
+  //タテヨコ比を変えないままトリミング
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+}
+
+.card-mypage-body {
+  text-align: center;
+  padding: auto;
+  margin: 10px;
+  margin-top: 30px;
+  // margin-right: 60px;
+}
+
+.card-mypage-title {
+  margin-bottom: 20px;
+}
+
+.card-mypage-btn {
+  width: 100%;
+  max-width: 460px;
+  margin: auto;
+  margin-top: 16px;
+  text-align: center;
+}
+
 // 投稿一覧ページ
 .text-card-container {
   padding-left: 9px;

@@ -1,3 +1,44 @@
 <div class="contents-title text-center">
-  <h3>- 【<%= @user.name %>】さんのマイページ -</h3>
+  <h3>- マイページ -</h3>
+</div>
+
+<div class="col-md-10 col-md-offset-1 mx-auto mypage-wrap bg-white">
+  <div class="row post-wrap">
+    <div class="col-md-7">
+      <div class="card-mypage-left">
+        <img src=<%= @user.image %> class="mypage_icon_image">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card-mypage-right ">
+        <div class="card-mypage-body">
+          <h4 class="card-mypage-title"><strong><%= @user.name %></strong></h4>
+          <h5 class="card-text">投稿数<i class="far fa-solid fa-comment-dots"></i> <strong><%= @user.posts.count %></strong> 件</h5>
+          <h5 class="card-text">いいね<i class="far fa-regular fa-thumbs-up"></i> <strong><%= @user.liked_posts.count %></strong> 件</h5>
+          <p class="post-id">
+            <% if current_user.id == @user.id %>
+              <%= link_to "アカウント編集", edit_user_registration_path, class: "card-mypage-btn btn-success btn-lg btn-block" %>
+            <% end %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="tabs">
+  <input id="all" type="radio" name="tab_item" checked>
+  <label class="tab_item" for="all">投稿した記事</label>
+
+  <input id="like" type="radio" name="tab_item">
+  <label class="tab_item" for="like">いいねした記事</label>
+
+  <div class="tab_content" id="all_content">
+    <%# <%= render 'posts/posts' , posts: @posts %>
+  </div>
+
+  <div class="tab_content" id="like_content">
+    <%# <%= render 'posts/posts' , posts: @like_posts %>
+  </div>
 </div>
