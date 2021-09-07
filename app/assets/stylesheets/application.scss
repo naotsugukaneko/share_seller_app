@@ -84,6 +84,17 @@ body {
   font-size: 0.8rem;
   margin: 0 auto;
 }
+///ヘッダーアイコン画像
+.navi_icon_image {
+  //サイズ指定
+  width: 24px;
+  height: 24px;
+  //画像を丸くする
+  border-radius: 36px;
+  //タテヨコ比を変えないままトリミング
+  object-fit: cover;
+  margin-right: 0;
+}
 
 // 投稿一覧ページ
 .text-card-container {

@@ -10,9 +10,10 @@
         <%= link_to "投稿", new_post_path, class: "nav-item nav-link active" %>
         <%= link_to "アカウント編集", edit_user_registration_path, class: "nav-item nav-link active" %>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" }, class: "nav-item nav-link active" %>
-        <div class= "nav-item nav-link active">
-          <%= "【ログインユーザー】#{current_user.name}" %>
-        </div>
+        <%= link_to user_path(current_user), class: "nav-item nav-link active", title: current_user.name do %>
+          <img src=<%= current_user.image %> class = "navi_icon_image">
+          <strong><%= current_user.name %></strong>
+        <% end %>
       <% else %>
         <%= link_to "ログイン", new_user_session_path, class: "nav-item nav-link active" %>
         <%= link_to "新規登録", new_user_registration_path, class: "nav-item nav-link active" %>
