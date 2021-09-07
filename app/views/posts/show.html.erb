@@ -13,7 +13,7 @@
         <div class="card-right ">
           <div class="card-right-comment">
             <div class="card-right-name">
-              <%= link_to user_session_path(@post.user), class: "black-color post-user-name", title: @post.user.name do %>
+              <%= link_to user_path(@post.user), class: "black-color post-user-name", title: @post.user.name do %>
                 <img src=<%= @post.user.image %> class = "icon_image">
                 <strong><%= @post.user.name %></strong>
               <% end %>
