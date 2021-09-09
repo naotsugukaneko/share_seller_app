@@ -15,7 +15,7 @@
           <h4 class="card-mypage-title"><strong><%= @user.name %></strong></h4>
           <h5 class="card-text">投稿数<i class="far fa-solid fa-comment-dots"></i> <strong><%= @user.posts.count %></strong> 件</h5>
           <h5 class="card-text">いいね<i class="far fa-regular fa-thumbs-up"></i> <strong><%= @user.liked_posts.count %></strong> 件</h5>
-          <p class="post-id">
+          <p class="mypage-id">
             <% if current_user.id == @user.id %>
               <%= link_to "アカウント編集", edit_user_registration_path, class: "card-mypage-btn btn-success btn-lg btn-block" %>
             <% end %>

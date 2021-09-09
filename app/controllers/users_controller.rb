@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show]
-  def show; end
+  def show
+    @likes = Like.where(user_id: @user.id).order(created_at: :desc)
+  end
 
   private
 
