@@ -38,18 +38,18 @@
     <div class="container-fluid">
       <div class="row">
         <% @posts.each do |post| %>
-          <div class="col-12 col-md-6 col-lg-6 text-card-container">
+          <div class="col-12 col-md-6 col-lg-4 tab-card-container">
             <div class="card content-card border-dark mb-3">
               <%= link_to post_path(post.id), class:"abc" do %>
                 <div class="card-header p-1">
-                  <%= image_tag post.image.url, class: 'card-img-top'%>
+                  <%= image_tag post.image.url, class: 'card-img-tab'%>
                 </div>
                 <div class="card-body text-card-body">
                   <p class="card-text text-title">
                     <img src=<%= post.user.image %> class = "icon_image">
                     <strong><%= post.user.name %></strong>
                   </p>
-                  <p><%= post.body.truncate(20) %></p>
+                  <p><%= post.body.truncate(30) %></p>
                   <small class="text-muted">
                     <%= l post.created_at, format: :short %>
                   </small>
@@ -70,11 +70,11 @@
     <div class="container-fluid">
       <div class="row">
         <% @likes.each do |like| %>
-          <div class="col-12 col-md-6 col-lg-6 text-card-container">
+          <div class="col-12 col-md-6 col-lg-4 tab-card-container">
             <div class="card content-card border-dark mb-3">
               <%= link_to post_path(like.post.user.id), class:"abc" do %>
                 <div class="card-header p-1">
-                  <%= image_tag like.post.image.url, class: 'card-img-top'%>
+                  <%= image_tag like.post.image.url, class: 'card-img-tab'%>
                 </div>
                 <div class="card-body text-card-body">
                   <p class="card-text text-title">
@@ -86,12 +86,14 @@
                     <%= l like.post.created_at, format: :short %>
                   </small>
                   <hr>
-                  <div class="vertical_like" style="color: red;">
-                    <strong><%= "「いいね」" %></strong>
-                    <i class="far fa-regular fa-thumbs-up"></i>
-                    <strong><%= "しました" %></strong>
-                    <i class="fas fa-heart unlike-btn" ></i>
-                    <%= like.post.likes.count %>
+                  <div class="card-like">
+                    <div class="vertical_like" style="color: red;">
+                      <strong><%= "「いいね」" %></strong>
+                      <i class="far fa-regular fa-thumbs-up"></i>
+                      <strong><%= "しました" %></strong>
+                      <i class="fas fa-heart unlike-btn" ></i>
+                      <%= like.post.likes.count %>
+                    </div>
                   </div>
                 </div>
               <% end %>
