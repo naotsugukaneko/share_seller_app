@@ -180,6 +180,11 @@ input[name='tab_item'] {
   overflow: hidden;
 }
 
+#all:checked ~ #all_content,
+#like:checked ~ #like_content {
+  display: block;
+}
+
 .tabs input:checked + .tab_item {
   background-color: #4f6ec2;
   color: #fff;
