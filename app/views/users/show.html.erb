@@ -1,0 +1,107 @@
+<div class="contents-title text-center">
+  <h3>- マイページ -</h3>
+</div>
+
+<div class="col-md-10 col-md-offset-1 mx-auto mypage-wrap bg-white">
+  <div class="row post-wrap">
+    <div class="col-md-7">
+      <div class="card-mypage-left">
+        <img src=<%= @user.image %> class="mypage_icon_image">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card-mypage-right ">
+        <div class="card-mypage-body">
+          <h4 class="card-mypage-title"><strong><%= @user.name %></strong></h4>
+          <h5 class="card-text">投稿数<i class="far fa-solid fa-comment-dots"></i> <strong><%= @user.posts.count %></strong> 件</h5>
+          <h5 class="card-text">いいね<i class="far fa-regular fa-thumbs-up"></i> <strong><%= @user.liked_posts.count %></strong> 件</h5>
+          <p class="mypage-id">
+            <% if current_user.id == @user.id %>
+              <%= link_to "アカウント編集", edit_user_registration_path, class: "card-mypage-btn btn-success btn-lg btn-block" %>
+            <% end %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="tabs">
+  <input id="all" type="radio" name="tab_item" checked>
+  <label class="tab_item" for="all">投稿した記事</label>
+
+  <input id="like" type="radio" name="tab_item">
+  <label class="tab_item" for="like">いいねした記事</label>
+
+  <div class="tab_content" id="all_content">
+    <div class="container-fluid">
+      <div class="row">
+        <% @posts.each do |post| %>
+          <div class="col-12 col-md-6 col-lg-4 tab-card-container">
+            <div class="card tab-content-card border-dark mb-3">
+              <%= link_to post_path(post.id), class:"abc" do %>
+                <div class="card-header p-1">
+                  <%= image_tag post.image.url, class: 'card-img-tab'%>
+                </div>
+                <div class="card-body text-card-body">
+                  <p class="card-text text-title">
+                    <img src=<%= post.user.image %> class = "icon_image">
+                    <strong><%= post.user.name %></strong>
+                  </p>
+                  <p><%= post.body.truncate(30) %></p>
+                  <small class="text-muted">
+                    <%= l post.created_at, format: :short %>
+                  </small>
+                  <hr>
+                  <div id="index_like<%= post.id %>">
+                    <%= render partial: 'likes/like', locals: { post: post, like: @like} %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab_content" id="like_content">
+    <div class="container-fluid">
+      <div class="row">
+        <% @likes.each do |like| %>
+          <div class="col-12 col-md-6 col-lg-4 tab-card-container">
+            <div class="card tab-content-card border-dark mb-3">
+              <%= link_to post_path(like.post.user.id), class:"abc" do %>
+                <div class="card-header p-1">
+                  <%= image_tag like.post.image.url, class: 'card-img-tab'%>
+                </div>
+                <div class="card-body text-card-body">
+                  <p class="card-text text-title">
+                    <img src=<%= like.post.user.image %> class = "icon_image">
+                    <strong><%= like.post.user.name %></strong>
+                  </p>
+                  <p><%= like.post.body.truncate(30) %></p>
+                  <small class="text-muted">
+                    <%= l like.post.created_at, format: :short %>
+                  </small>
+                  <hr>
+                  <div class="card-like">
+                    <div class="vertical_like" style="color: red;">
+                      <strong><%= "「いいね」" %></strong>
+                      <i class="far fa-regular fa-thumbs-up"></i>
+                      <strong><%= "しました" %></strong>
+                      <i class="fas fa-heart unlike-btn" ></i>
+                      <%= like.post.likes.count %>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+</div>
