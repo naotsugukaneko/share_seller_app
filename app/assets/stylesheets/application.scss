@@ -126,7 +126,6 @@ body {
   padding: auto;
   margin: 10px;
   margin-top: 30px;
-  // margin-right: 60px;
 }
 
 .card-mypage-title {
@@ -196,10 +195,11 @@ input[name='tab_item'] {
   margin-top: 1px;
   margin-bottom: 30px;
 }
-.content-card {
+.tab-content-card {
   height: 100%;
   max-width: 100%;
   margin: 0 auto;
+  background-color: #f0f4ff;
 }
 
 .card-img-tab {

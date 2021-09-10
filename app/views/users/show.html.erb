@@ -39,7 +39,7 @@
       <div class="row">
         <% @posts.each do |post| %>
           <div class="col-12 col-md-6 col-lg-4 tab-card-container">
-            <div class="card content-card border-dark mb-3">
+            <div class="card tab-content-card border-dark mb-3">
               <%= link_to post_path(post.id), class:"abc" do %>
                 <div class="card-header p-1">
                   <%= image_tag post.image.url, class: 'card-img-tab'%>
@@ -71,7 +71,7 @@
       <div class="row">
         <% @likes.each do |like| %>
           <div class="col-12 col-md-6 col-lg-4 tab-card-container">
-            <div class="card content-card border-dark mb-3">
+            <div class="card tab-content-card border-dark mb-3">
               <%= link_to post_path(like.post.user.id), class:"abc" do %>
                 <div class="card-header p-1">
                   <%= image_tag like.post.image.url, class: 'card-img-tab'%>
