@@ -1,64 +1,71 @@
 <div class="card top-page">
-<div class="col-12 col-md-12 col-lg-12 top-wrap">
-  <div class="row post-wrap">
-    <div class="col-md-8">
-      <div class="card-top-left">
-        <div class="card-left-body">
-          <strong><h2>- 明日の500円を稼ぐ -</h2></strong>
-          <h4>自慢の売場を共有しよう</h4>
-          <h6>~ 小売店舗の投稿型情報共有サイトです ~</h6>
+  <div class="col-12 col-md-12 col-lg-12 top-wrap">
+    <div class="row top-wrap">
+      <div class="col-md-7">
+        <div class="card-top-left">
+          <div class="card-left-title">
+            <strong><h2>- 明日の500円を稼ぐ -</h2></strong>
+            <h4>自慢の売場を共有しよう</h4>
+          </div>
+          <div class="card-left-body">
+            <h3 class="card-header bg-dark text-white">About 「タイトル」</h3>
+            <div class="card-body">
+              <h5 class="card-explain">「タイトル」は小売店舗の投稿型情報共有サイトです！</h5>
+              <p class="card-text">
+                日々変更が必要な売場…どのように変更しようか。<br>他店はどうしているのだろうか？<br>
+                そんな担当者さんの悩みを写真でわかりやすく拝見することができ、<br>参考にすることができます。
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
 
-      <div class="col-md-4">
+      <div class="col-md-5">
         <div class="card card-top-right bg-white">
           <div class="container-login">
-          <h3><%= t('.sign_in') %></h3>
+            <h3><%= t('.sign_in') %></h3>
 
-          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-            <div class="form-group">
-              <%= f.label :email %>
-              <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control' %>
-            </div>
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <div class="form-group">
+                <%= f.label :email %>
+                <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control' %>
+              </div>
 
-            <div class="form-group">
-              <%= f.label :password %>
-              <%= f.password_field :password, autocomplete: 'current-password',
-                                  class: 'form-control',
-                                  required: true,
-                                  minlength: @minimum_password_length,
-                                  maxlength: '30' %>
-            </div>
+              <div class="form-group">
+                <%= f.label :password %>
+                <%= f.password_field :password, autocomplete: 'current-password',
+                                    class: 'form-control',
+                                    required: true,
+                                    minlength: @minimum_password_length,
+                                    maxlength: '30' %>
+              </div>
 
-            <% if devise_mapping.rememberable? %>
-              <div class="form-group form-check">
-                <%= f.check_box :remember_me, class: 'form-check-input' %>
-                <%= f.label :remember_me, class: 'form-check-label' do %>
-                  <%= resource.class.human_attribute_name('remember_me') %>
-                <% end %>
+              <% if devise_mapping.rememberable? %>
+                <div class="form-group form-check">
+                  <%= f.check_box :remember_me, class: 'form-check-input' %>
+                  <%= f.label :remember_me, class: 'form-check-label' do %>
+                    <%= resource.class.human_attribute_name('remember_me') %>
+                  <% end %>
+                </div>
+              <% end %>
+
+              <div class="form-group">
+                <%= f.submit  t('.sign_in'), class: 'btn btn-primary btn-block' %>
+                <%= link_to "ゲストログイン(閲覧用)", users_guest_sign_in_path, method: :post, class: 'btn btn-info btn-block' %>
               </div>
             <% end %>
 
-            <div class="form-group">
-              <%= f.submit  t('.sign_in'), class: 'btn btn-primary btn-block' %>
-              <%= link_to "ゲストログイン(閲覧用)", users_guest_sign_in_path, method: :post, class: 'btn btn-info btn-block' %>
-            </div>
-          <% end %>
-
-          <%= render 'devise/shared/links' %>
-          
+            <%= render 'devise/shared/links' %>          
+          </div>
         </div>
       </div>
 
     </div>
   </div>
 </div>
-</div>
 
-<div class="contents-entry">
-    <p>このサイトの特徴</p>
-    <p>情報を共有して下記のような疑問を解消しよう</p>
+<div class="contents-info">
+    <p>情報を共有して課題を解消しよう</p>
   </div>
 
   <div class="deck-entry">
@@ -67,7 +74,7 @@
         <%# <%= image_tag "finder-icon" ,class:"card-img-top" %> %>
         <div class="card-body text-white">
           <h5 class="card-title">新規商品</h5>
-          <p class="card-text">新規商品の展開事例<br>他店はどんな展開しているの？</p>
+          <p class="card-text">大量な毎週の新規商品<br>他店はどんな工夫をしているの？</p>
         </div>
       </div>
 
@@ -75,7 +82,7 @@
         <%# <%= image_tag "sns-icon" ,class:"card-img-top" %> %>
         <div class="card-body text-white">
           <h5 class="card-title">季節商品</h5>
-          <p class="card-text">早めの展開が必須！<br>いつ頃から展開しているの？</p>
+          <p class="card-text">早めの展開が必須！<br>いつからの展開が正解なの？</p>
         </div>
       </div>
 
@@ -83,7 +90,7 @@
         <%# <%= image_tag "tips-icon" ,class:"card-img-top" %> %>
         <div class="card-body text-white">
           <h5 class="card-title">予約商品</h5>
-          <p class="card-text">季節毎の予約商品<br>どうやって獲得しているの？</p>
+          <p class="card-text">シーズン毎の様々な予約商品<br>どうやって獲得しているの？</p>
         </div>
       </div>
 
