@@ -73,7 +73,7 @@ main {
 
 //ヘッダー
 body {
-  padding-top: 48px;
+  padding-top: 60px;
 }
 
 .navbar-collapse {
@@ -84,7 +84,18 @@ body {
   font-size: 0.8rem;
   margin: 0 auto;
 }
-///ヘッダーアイコン画像
+
+.navi-title {
+  margin-top: 10px;
+}
+
+.favicon_img {
+  width: 40px;
+  height: 40px;
+  vertical-align: bottom;
+  padding-bottom: 3px;
+}
+///ヘッダーアイコン画
 .navi_icon_image {
   //サイズ指定
   width: 24px;
@@ -100,7 +111,7 @@ body {
 .top-page {
   background: linear-gradient(to right, #7eb0f7, #5f61e9);
   padding: 20px;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .top-wrap {

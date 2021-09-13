@@ -1,6 +1,9 @@
 <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
   <span class="navbar-brand">
-  <%= link_to "【仮】売場共有", root_path, :style=>"color:red;" %></span>
+  <%= link_to root_path, :style=>"color:black", class: "nav-title", title: "Seller info" do %>
+    <img src=<%= image_url "favicon.ico"%> class = "favicon_img">
+    <font size="6">Seller info</font>
+  <% end %></span>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
