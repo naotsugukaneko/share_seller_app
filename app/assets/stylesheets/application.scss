@@ -76,10 +76,6 @@ body {
   padding-top: 48px;
 }
 
-.base-bg-color {
-  background: linear-gradient(to right, #353ada, #5a9dfb);
-}
-
 .navbar-collapse {
   justify-content: flex-end;
 }
@@ -102,10 +98,9 @@ body {
 
 // トップページ
 .top-page {
-  background-color: #7eb0f7;
+  background: linear-gradient(to right, #7eb0f7, #5f61e9);
   padding: 20px;
   margin: 0;
-  // position: relative;
 }
 
 .top-wrap {
