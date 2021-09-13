@@ -73,9 +73,12 @@ main {
 
 //ヘッダー
 body {
-  padding-top: 60px;
+  padding-top: 64px;
 }
 
+.base-bg-color {
+  background-color: #fffaf0;
+}
 .navbar-collapse {
   justify-content: flex-end;
 }
