@@ -113,7 +113,7 @@ body {
 
 .card-top-left {
   color: rgb(252, 248, 248);
-  padding-top: 90px;
+  padding-top: 80px;
   // position: absolute;
 }
 
@@ -153,6 +153,12 @@ body {
   border-radius: 5px;
   box-sizing: border-box;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+}
+
+.card-top-image {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
 }
 
 // マイページ
