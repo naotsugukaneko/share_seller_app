@@ -73,13 +73,12 @@ main {
 
 //ヘッダー
 body {
-  padding-top: 48px;
+  padding-top: 64px;
 }
 
 .base-bg-color {
-  background: linear-gradient(to right, #353ada, #5a9dfb);
+  background-color: #fffaf0;
 }
-
 .navbar-collapse {
   justify-content: flex-end;
 }
@@ -88,7 +87,18 @@ body {
   font-size: 0.8rem;
   margin: 0 auto;
 }
-///ヘッダーアイコン画像
+
+.navi-title {
+  margin-top: 10px;
+}
+
+.favicon_img {
+  width: 38px;
+  height: 38px;
+  vertical-align: bottom;
+  padding-bottom: 5px;
+}
+///ヘッダーアイコン画
 .navi_icon_image {
   //サイズ指定
   width: 24px;
@@ -102,10 +112,9 @@ body {
 
 // トップページ
 .top-page {
-  background-color: #7eb0f7;
+  background: linear-gradient(to right, #7eb0f7, #5f61e9);
   padding: 20px;
-  margin: 0;
-  // position: relative;
+  margin: 0 auto;
 }
 
 .top-wrap {

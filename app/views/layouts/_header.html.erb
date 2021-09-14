@@ -1,22 +1,25 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top">
+<nav class="navbar navbar-expand-sm navbar-light fixed-top" style="background-color: #fffaf0;">
   <span class="navbar-brand">
-  <%= link_to "【仮】売場共有", root_path, :style=>"color:red;" %></span>
+  <%= link_to root_path, :style=>"color:black", class: "nav-title", title: "Seller info" do %>
+    <img src=<%= image_url "favicon.ico"%> class = "favicon_img">
+    <font size="6">Seller info</font>
+  <% end %></span>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <% if user_signed_in? %>
-        <%= link_to "投稿", new_post_path, class: "nav-item nav-link active" %>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" }, class: "nav-item nav-link active" %>
+        <strong><%= link_to "投稿", new_post_path, class: "nav-item nav-link active" %></strong>
+        <strong><%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" }, class: "nav-item nav-link active" %></strong>
         <%= link_to user_path(current_user), class: "nav-item nav-link active", title: current_user.name do %>
           <img src=<%= current_user.image %> class = "navi_icon_image">
           <strong><%= current_user.name %></strong>
         <% end %>
       <% else %>
-        <%= link_to "新規登録", new_user_registration_path, class: "nav-item nav-link active" %>
-        <%= link_to "ログイン", new_user_session_path, class: "nav-item nav-link active" %>
-        <%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post, class: "nav-item nav-link active" %>
+        <strong><%= link_to "新規登録", new_user_registration_path, class: "nav-item nav-link active" %></strong>
+        <strong><%= link_to "ログイン", new_user_session_path, class: "nav-item nav-link active" %></strong>
+        <strong><%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post, class: "nav-item nav-link active" %></strong>
       <% end %>
     </div>
   </div>
