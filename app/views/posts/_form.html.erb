@@ -1,6 +1,7 @@
 <div class="container form-container">
   <%= form_with model: @post, local: true do |f| %>
     <%= image_tag(@post.image.url) if @post.image? %>
+    <strong><p>現在の投稿画像【新たに選択しなければ画像は変更されません】</p></strong>
     <%= f.hidden_field :image_cache %>
     <div class="card image-form-card">
       <%= f.file_field :image, class: "post-image", accept: "image/png,image/jpeg,image/gif" %>

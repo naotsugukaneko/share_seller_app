@@ -27,7 +27,7 @@ class ImageUploader < CarrierWave::Uploader::Base
     %w[jpg jpeg gif png]
   end
 
-  process resize_to_limit: [400, 500]
+  process resize_to_limit: [400, 400]
 
   def size_range
     0..5.megabytes
