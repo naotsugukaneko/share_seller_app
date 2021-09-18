@@ -18,7 +18,12 @@
   </div>
 
   <div class="field">
-    <%= f.label :image, "プロフィール画像" %><br/>
+    <%= "現在のプロフィール画像" %>
+    <br>
+    <img src=<%= current_user.image %> class="mypage_icon_image">
+    <br>
+    <p></p>
+    <%= f.label :image, "プロフィール画像変更" %><br/>
     <%= f.file_field :image %>
   </div>
 
