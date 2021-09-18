@@ -454,9 +454,12 @@ input[name='tab_item'] {
 ///画像選択
 .image-form-card {
   max-width: 800px;
-  padding: 15px;
-  height: 4.5rem;
-  font-size: 20px;
+  padding: 8px;
+  padding-left: 14px;
+  margin-top: 16px;
+  height: 3.5rem;
+  font-size: 18px;
+  border: 3px solid black;
 }
 ///投稿内容
 .input-post {
@@ -467,6 +470,14 @@ input[name='tab_item'] {
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 20px;
+}
+///投稿中の画像
+.card_img_edit {
+  //サイズ指定
+  width: 300px;
+  height: 300px;
+  //タテヨコ比を変えないままトリミング
+  object-fit: cover;
 }
 
 // いいね機能

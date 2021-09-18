@@ -1,10 +1,11 @@
 <div class="container form-container">
   <%= form_with model: @post, local: true do |f| %>
+    <%= image_tag(@post.image.url) if @post.image? %>
+    <%= f.hidden_field :image_cache %>
     <div class="card image-form-card">
       <%= f.file_field :image, class: "post-image", accept: "image/png,image/jpeg,image/gif" %>
-      <%= f.hidden_field :image_cache %>
-    </div>
-    <%= f.text_area :body, class: "input-post", placeholder: " 🖋投稿する..", rows: 12, required: true %>
+    </div>      
+    <%= f.text_area :body, class: "input-post", placeholder: " 🖋投稿する..", rows: 10, required: true %>
     <%= f.submit "投稿する", class: "form-btn btn btn-info btn-lg btn-block" %>
   <% end %>
 </div>
