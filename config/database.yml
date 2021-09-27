@@ -82,5 +82,6 @@ test:
 production:
   <<: *default
   database: share_seller_app_production
-  username: share_seller_app
-  password: <%= ENV['SHARE_SELLER_APP_DATABASE_PASSWORD'] %>
+  username: postgres
+  password: <%= Rails.application.credentials.db[:password] %>
+  host: <%= Rails.application.credentials.db[:hostname] %>
