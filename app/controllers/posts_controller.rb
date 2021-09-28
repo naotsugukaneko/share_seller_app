@@ -30,6 +30,13 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    @posts = Post.where("body LIKE(?)", "%#{params[:keyword]}%") # paramsとして送られてきたkeyword（入力された語句）で、Postモデルのbodyカラムを検索し、その結果を@upostsに代入する
+    respond_to do |format|
+      format.json { render "index", json: @posts } # json形式のデータを受け取ったら、@postsをデータとして返す そしてindexをrenderで表示する
+    end
+  end
+
   private
 
   def post_params

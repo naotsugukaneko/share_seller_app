@@ -1,6 +1,10 @@
 <div class="contents-title text-center">
   <h3>- 投稿一覧 -</h3>
 </div>
+<%# <input type=form id="form" placeholder="検索したいキーワードを入力して下さい" style="width: 250px;"/> %>
+<%# <ul id="result"> %>
+<!-- この中に<li>body内容</li>みたいに検索候補を追加していきます -->
+<%# </ul> %>
 <%= render 'posts/post', post: @post %>
 <hr>
 <%= paginate @posts %>
