@@ -37,24 +37,24 @@ https://seller-info.herokuapp.com
 
 # 工夫したところ
 - 投稿
- - 一眼でわかるよう画像を強調
- - シンプルな設計
- - コメントを非同期で実装
+   - 一眼でわかるよう画像を強調
+   - シンプルな設計
+   - コメントを非同期で実装
 - マイページ
- - 投稿した記事といいねした記事をタブで表示
+   - 投稿した記事といいねした記事をタブで表示
 
 # 使用技術
 - フロントサイド
- - HTML (erb)
- - CSS (sass)
- - JavaScript (JQuery,erb)
- - Bootstrap
+    - HTML (erb)
+    - CSS (sass)
+    - JavaScript (JQuery,erb)
+    - Bootstrap
 - バックエンド
- - Ruby (2.7.3)
- - Ruby on Rails (6.1.3.2)
+   - Ruby (2.7.3)
+   - Ruby on Rails (6.1.3.2)
 - DB
- - PostgreSQL (13.2)
+   - PostgreSQL (13.2)
 - インフラ
- - Heroku
+   - Heroku
 
 # ER図
