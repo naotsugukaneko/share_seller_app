@@ -25,6 +25,7 @@ https://seller-info.herokuapp.com
 | 8 | マイページ | 投稿した記事<br>いいねした記事 |
 | 9 | 管理者画面 | activeadmin |
 
+
 - 📖トップページ
 
 ![トップページ(Seller info)](https://user-images.githubusercontent.com/77927517/137942080-641f90cb-9459-4b30-aeb5-1f30c5ff6af9.gif)
@@ -40,7 +41,7 @@ https://seller-info.herokuapp.com
 ![詳細・コメント・いいね(Seller info)](https://user-images.githubusercontent.com/77927517/137944187-1a703ecf-c42f-4543-8dc0-6917c4b56a70.gif)
 
 - 👤マイページ
-- 
+
 ![マイページ(Seller info)](https://user-images.githubusercontent.com/77927517/137945129-fbadfae5-6fbf-42b9-905b-d2035b2249a9.gif)
 
 # 💡工夫したところ
