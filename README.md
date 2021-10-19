@@ -1,5 +1,4 @@
-# README
-
+<img width="1149" alt="スクリーンショット 2021-10-19 11 38 18" src="https://user-images.githubusercontent.com/77927517/137834608-432b689a-57c0-4158-8651-a6b953eb8bce.png">
 # Seller info
 小売店舗の売り方共有サイトです。他店の新規商品・自慢のPOP・季節トレンド商品の展開を効率よく参考にすることができることを目的に開発しました。
 
