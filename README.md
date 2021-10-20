@@ -68,3 +68,7 @@ https://seller-info.herokuapp.com
 
 # 📈ER図
 <img width="604" alt="スクリーンショット 2021-10-19 11 49 24" src="https://user-images.githubusercontent.com/77927517/137835554-26be68d3-dce9-4226-b4ec-f1b1318c7d3e.png">
+
+# 🔨今後追加したい機能
+- 検索機能
+- 投稿店舗の都道府県選択
