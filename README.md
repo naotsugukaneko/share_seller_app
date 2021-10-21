@@ -1,4 +1,4 @@
-# Seller info
+# アプリ名：Seller info
 小売店舗の売り方共有サイトです。他店の新規商品・自慢のPOP・季節トレンド商品の展開を効率よく参考にすることができることを目的に開発しました。
 <img width="1149" alt="スクリーンショット 2021-10-19 11 44 34" src="https://user-images.githubusercontent.com/77927517/137835113-58056e40-490e-4a8c-993c-19b42580ebc9.png">
 
