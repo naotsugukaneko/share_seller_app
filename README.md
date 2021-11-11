@@ -73,3 +73,4 @@ https://seller-info.herokuapp.com
 - 検索機能
 - 投稿店舗の都道府県選択
 - 戻るボタンの設置（JavaScript）
+- 並べ替え機能
